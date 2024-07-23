@@ -10,7 +10,6 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   logging: console.log,
 });
 
-// Define models
 const User = require('./user')(sequelize, Sequelize.DataTypes);
 const Book = require('./book')(sequelize, Sequelize.DataTypes);
 
