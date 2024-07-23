@@ -5,11 +5,13 @@ const app = express();
 const db = require('./models');
 const authRoutes = require('./routes/authRoutes');
 const bookRoutes = require('./routes/bookRoutes');
+const dummyRoutes = require('./routes/dummyRoutes');
 
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api', bookRoutes);
+app.use('/api', dummyRoutes);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
